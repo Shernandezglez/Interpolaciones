@@ -21,10 +21,36 @@ namespace Interpolaciones
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-           
-            inter.calcularInter(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
+            if ((string)Operaciones.SelectedItem == "Inter(Normal)") 
+            {
+                inter.calcularInter(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
 
-            txtResultado.Text = inter.resultado();
+                txtResultado.Text = inter.resultado();
+            }
+            else if ((string)Operaciones.SelectedItem == "Lagrange")
+            {
+                if (primer.Checked)
+                {
+                    inter.lagrange1(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
+                    txtResultado.Text = inter.resultado();
+                }
+                else if (segundo.Checked)
+                {
+                    inter.lagrange2(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
+                    txtResultado.Text = inter.resultado();
+                }
+                else
+                {
+                    MessageBox.Show("Error, Selecciona un orden");
+                }
+            }
+            else if((string)Operaciones.SelectedItem == "Cuadratica")
+            {
+                
+                inter.InterCuadratica(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
+                txtResultado.Text = inter.resultado();
+            }
+            
 
         }
     }

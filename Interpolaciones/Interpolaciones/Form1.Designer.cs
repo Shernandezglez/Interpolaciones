@@ -37,11 +37,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Operaciones = new System.Windows.Forms.ComboBox();
+            this.primer = new System.Windows.Forms.CheckBox();
+            this.segundo = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtX2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtX
             // 
-            this.txtX.Location = new System.Drawing.Point(181, 84);
+            this.txtX.Location = new System.Drawing.Point(181, 24);
             this.txtX.Name = "txtX";
             this.txtX.Size = new System.Drawing.Size(100, 20);
             this.txtX.TabIndex = 0;
@@ -49,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 87);
+            this.label1.Location = new System.Drawing.Point(140, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 1;
@@ -57,7 +62,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(195, 204);
+            this.btnCalcular.Location = new System.Drawing.Point(193, 310);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 2;
@@ -67,14 +72,14 @@
             // 
             // txtX0
             // 
-            this.txtX0.Location = new System.Drawing.Point(181, 133);
+            this.txtX0.Location = new System.Drawing.Point(181, 73);
             this.txtX0.Name = "txtX0";
             this.txtX0.Size = new System.Drawing.Size(100, 20);
             this.txtX0.TabIndex = 3;
             // 
             // txtX1
             // 
-            this.txtX1.Location = new System.Drawing.Point(181, 178);
+            this.txtX1.Location = new System.Drawing.Point(181, 118);
             this.txtX1.Name = "txtX1";
             this.txtX1.Size = new System.Drawing.Size(100, 20);
             this.txtX1.TabIndex = 4;
@@ -82,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(140, 136);
+            this.label2.Location = new System.Drawing.Point(140, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 5;
@@ -91,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 181);
+            this.label3.Location = new System.Drawing.Point(140, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 6;
@@ -99,7 +104,7 @@
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(143, 281);
+            this.txtResultado.Location = new System.Drawing.Point(142, 366);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(176, 63);
@@ -108,17 +113,70 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(206, 265);
+            this.label4.Location = new System.Drawing.Point(204, 350);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Resultadp";
+            this.label4.Text = "Resultado";
+            // 
+            // Operaciones
+            // 
+            this.Operaciones.FormattingEnabled = true;
+            this.Operaciones.Items.AddRange(new object[] {
+            "Inter(Normal)",
+            "Lagrange",
+            "Cuadratica"});
+            this.Operaciones.Location = new System.Drawing.Point(169, 221);
+            this.Operaciones.Name = "Operaciones";
+            this.Operaciones.Size = new System.Drawing.Size(121, 21);
+            this.Operaciones.TabIndex = 10;
+            // 
+            // primer
+            // 
+            this.primer.AutoSize = true;
+            this.primer.Location = new System.Drawing.Point(101, 260);
+            this.primer.Name = "primer";
+            this.primer.Size = new System.Drawing.Size(85, 17);
+            this.primer.TabIndex = 11;
+            this.primer.Text = "Primer orden";
+            this.primer.UseVisualStyleBackColor = true;
+            // 
+            // segundo
+            // 
+            this.segundo.AutoSize = true;
+            this.segundo.Location = new System.Drawing.Point(274, 260);
+            this.segundo.Name = "segundo";
+            this.segundo.Size = new System.Drawing.Size(99, 17);
+            this.segundo.TabIndex = 12;
+            this.segundo.Text = "Segundo orden";
+            this.segundo.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(140, 168);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "x2";
+            // 
+            // txtX2
+            // 
+            this.txtX2.Location = new System.Drawing.Point(181, 165);
+            this.txtX2.Name = "txtX2";
+            this.txtX2.Size = new System.Drawing.Size(100, 20);
+            this.txtX2.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtX2);
+            this.Controls.Add(this.segundo);
+            this.Controls.Add(this.primer);
+            this.Controls.Add(this.Operaciones);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label3);
@@ -146,6 +204,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox Operaciones;
+        private System.Windows.Forms.CheckBox primer;
+        private System.Windows.Forms.CheckBox segundo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtX2;
     }
 }
 
