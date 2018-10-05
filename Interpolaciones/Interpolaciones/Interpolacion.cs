@@ -28,9 +28,9 @@ namespace Interpolaciones
 
         public void lagrange2(int x, int x0, int x1, int x2)
         {
-            fx = (((x - x1 / x0 - x1) * (x - x2 / x0 - x2)) * Math.Log(x0))
-                + (((x - x0 / x1 - x0) * (x - x2 / x1 - x2)) * Math.Log(x1))
-                + (((x - x0 / x2 - x0) * (x - x1 / x2 - x1)) * Math.Log(x2));
+            fx = ((((x - x1) / (x0 - x1)) * ((x - x2 )/ (x0 - x2))) * Math.Log(x0))
+                + ((((x - x0) / (x1 - x0)) * ((x - x2) / (x1 - x2))) * Math.Log(x1))
+                + ((((x - x0) / (x2 - x0)) * ((x - x1) / (x2 - x1))) * Math.Log(x2));
 
             er = Math.Abs(((Math.Log(x) - fx) / fx) * 100);
         }

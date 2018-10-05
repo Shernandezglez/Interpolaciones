@@ -21,37 +21,71 @@ namespace Interpolaciones
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            if ((string)Operaciones.SelectedItem == "Inter(Normal)") 
-            {
-                inter.calcularInter(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
 
-                txtResultado.Text = inter.resultado();
-            }
-            else if ((string)Operaciones.SelectedItem == "Lagrange")
+            try
             {
-                if (primer.Checked)
+                if ((string)Operaciones.SelectedItem != "Lagrange" && primer.Checked && segundo.Checked)
                 {
-                    inter.lagrange1(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
-                    txtResultado.Text = inter.resultado();
+                    MessageBox.Show("No puedes usar ningun orden si no seleccionas el metodo de lagrange");
                 }
-                else if (segundo.Checked)
-                {
-                    inter.lagrange2(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
-                    txtResultado.Text = inter.resultado();
-                }
+
                 else
                 {
-                    MessageBox.Show("Error, Selecciona un orden");
-                }
-            }
-            else if((string)Operaciones.SelectedItem == "Cuadratica")
-            {
-                
-                inter.InterCuadratica(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
-                txtResultado.Text = inter.resultado();
-            }
-            
+                    if ((string)Operaciones.SelectedItem == "Inter(Normal)")
+                    {
+                        inter.calcularInter(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
 
+                        txtResultado.Text = inter.resultado();
+                    }
+                    else if ((string)Operaciones.SelectedItem == "Lagrange")
+                    {
+                        if (primer.Checked && segundo.Checked)
+                        {
+                            MessageBox.Show("solo puede elejir uno");
+                        }
+                        else
+                        {
+                            if (primer.Checked)
+                            {
+                                inter.lagrange1(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text));
+                                txtResultado.Text = inter.resultado();
+                            }
+                            else if (segundo.Checked)
+                            {
+                                inter.lagrange2(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
+                                txtResultado.Text = inter.resultado();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error, Selecciona un orden");
+                            }
+                        }
+
+                    }
+                    else if ((string)Operaciones.SelectedItem == "Cuadratica")
+                    {
+
+                        inter.InterCuadratica(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtX0.Text), Convert.ToInt32(txtX1.Text), Convert.ToInt32(txtX2.Text));
+                        txtResultado.Text = inter.resultado();
+                    }
+
+
+                    else
+                    {
+                        MessageBox.Show("elija el método de interpolación");
+                    }
+                }
+            }catch(FormatException)
+            {
+                MessageBox.Show("Solo se aceptan numeros");
+            }
+
+
+            txtX.Clear();
+            txtX0.Clear();
+            txtX1.Clear();
+            txtX2.Clear();
+            txtX.Focus();
         }
     }
 }
