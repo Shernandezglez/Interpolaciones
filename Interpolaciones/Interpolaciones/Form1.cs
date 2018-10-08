@@ -87,5 +87,10 @@ namespace Interpolaciones
             txtX2.Clear();
             txtX.Focus();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

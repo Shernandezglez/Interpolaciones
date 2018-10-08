@@ -10,12 +10,11 @@ namespace Interpolaciones
     {
         
         double fx, er,b0,b1,b2 = 0;
-        
 
         public void calcularInter(int x, int  x0, int x1)
         {
             
-            fx = (((Math.Log(x0)) + (Math.Log(x1) - Math.Log(x0)) / (x1 - x0)))*(x - x0);
+            fx = (((Math.Log(x1) - Math.Log(x0)) / (x1 - x0)))*((x - x0)) + (Math.Log(x0));
             er = Math.Abs(((Math.Log(x) - fx) / fx) * 100);
    
         }
@@ -23,15 +22,15 @@ namespace Interpolaciones
         {
             fx = ((x - x1 / x0 - x1) * Math.Log(x0)) 
                 + ((x - x0 / x1 - x0) * Math.Log(x1));
-            er = Math.Abs(((Math.Log(x) - fx) / fx) * 100);
+            er = Math.Abs(((Math.Log(x) - fx) / Math.Log(x)) * 100);
         }
 
-        public void lagrange2(int x, int x0, int x1, int x2)
+        public void lagrange2(double x, double x0, double x1, double x2)
         {
-            fx = ((((x - x1) / (x0 - x1)) * ((x - x2 )/ (x0 - x2))) * Math.Log(x0))
-                + ((((x - x0) / (x1 - x0)) * ((x - x2) / (x1 - x2))) * Math.Log(x1))
-                + ((((x - x0) / (x2 - x0)) * ((x - x1) / (x2 - x1))) * Math.Log(x2));
-
+            
+            fx = (((x - x1) / (x0- x1)) * ((x - x2) / (x0 - x2)) * Math.Log(x0))
+                + (((x - x0) / (x1 - x0)) * ((x - x2) / (x1 - x2)) * Math.Log(x1))
+                + (((x - x0) / (x2 - x0)) * ((x - x1) / (x2 - x1)) * Math.Log(x2));
             er = Math.Abs(((Math.Log(x) - fx) / fx) * 100);
         }
 
@@ -41,7 +40,8 @@ namespace Interpolaciones
             b1 = (Math.Log(x1) - Math.Log(x0)) / (x1 - x0);
             b2 = (((Math.Log(x2) - Math.Log(x1)) / (x2 - x1)) - b1) / (x2 - x0);
 
-            fx = b0 + (b1 * (x - x0)) + (b2 * ((x - x0) * (x - x1)));   
+            fx = b0 + (b1 * (x - x0)) + (b2 * ((x - x0) * (x - x1)));
+            er = Math.Abs(((Math.Log(x) - fx) / fx) * 100);
         }
 
 
@@ -49,9 +49,9 @@ namespace Interpolaciones
         {
             string cdn = "";
 
-            cdn = "f(x)= " + fx + "\r\n" + "Error relativo = " + er;
-            
+            cdn = "f(x)= " + fx + "\r\n" + "Error relativo = " + er ;
             return cdn;
+            
         }
 
     }

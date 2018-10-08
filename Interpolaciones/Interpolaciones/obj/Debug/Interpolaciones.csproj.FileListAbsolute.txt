@@ -8,3 +8,13 @@ C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\Interpolaciones\Interpolaciones\obj\
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.csproj.CoreCompileInputs.cache
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.exe
 C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.pdb
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\bin\Debug\Interpolaciones.exe.config
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\bin\Debug\Interpolaciones.exe
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\bin\Debug\Interpolaciones.pdb
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.csprojAssemblyReference.cache
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.Form1.resources
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.Properties.Resources.resources
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.csproj.GenerateResource.cache
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.csproj.CoreCompileInputs.cache
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.exe
+C:\Users\Isaac\Documents\Interpolaciones-master\Interpolaciones\Interpolaciones\obj\Debug\Interpolaciones.pdb

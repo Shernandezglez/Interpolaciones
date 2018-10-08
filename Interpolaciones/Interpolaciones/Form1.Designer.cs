@@ -42,6 +42,7 @@
             this.segundo = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtX2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtX
@@ -167,11 +168,21 @@
             this.txtX2.Size = new System.Drawing.Size(100, 20);
             this.txtX2.TabIndex = 13;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(405, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(176, 63);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 450);
+            this.ClientSize = new System.Drawing.Size(779, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtX2);
             this.Controls.Add(this.segundo);
@@ -209,6 +220,7 @@
         private System.Windows.Forms.CheckBox segundo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtX2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
